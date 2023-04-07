@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <title>TRABAJOS REALIZADOS</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+         <style>
+      .thumbnail img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+      }
+      .thumbnail h4 {
+        margin-top: 1rem;
+        font-weight: bold;
+      }
+      .gallery {
+        display: none;
+      }
+      .gallery.active {
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 1rem;
+      }
+      .gallery.active img {
+        width: 100%;
+        height: 150px;
+        margin-right: 1rem;
+        margin-bottom: 1rem;
+        object-fit: cover;
+        cursor: pointer;
+      }
+      .gallery.active img:last-child {
+        margin-right: 0;
+      }
+      .gallery.active img:hover {
+        opacity: 0.8;
+      }
+    </style>
+  </head>
+
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #a0191f;">
+      <div class="container">
+        <a class="navbar-brand" href="index.html"><img src="Img/logotallerrayomkeen.png" class="img-responsive" width="266" height="150" alt="Logo Taller Mecánico"></a>
+        <div>
+           <h1 class="titulo">RAYO MAKWEEN</h1>
+          <h5 class="subtitulo">TALLER MECANICO</h5>
+        </div>
+             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+             </button>
+  
+            <div class="collapse navbar-collapse" id="navbarNav">
+               <ul class="navbar-nav ml-auto">
+                 <li class="nav-item active">
+                   <a class="nav-link" href="index.html">Inicio <span class="sr-only">(current)</span></a>
+                 </li>
+  
+               <li class="nav-item">
+               <a class="nav-link" href="trabajos_realizados.html">Trabajos realizados</a>
+              </li>
+  
+              <li class="nav-item">
+               <a class="nav-link" href="contacto.html">Contacto</a>
+             </li>
+  
+              <li class="nav-item">
+                <a class="nav-link" href="login_registro.html">Login / Registro</a>
+                 </li>
+                 </div>
+  
+       
+  
+                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                  <form class="form-inline ml-auto">
+                    <div class="input-group">
+                      <input class="form-control mr-sm-2" type="search" placeholder="Buscar" aria-label="Buscar">
+                      <div class="input-group-append">
+                        <button class="btn btn-outline-danger" type="submit">Buscar</button>
+                      </div>
+                    </div>
+                    <div class="input-group ml-2">
+                      <select class="custom-select" id="filtro">
+                        <option selected></option>
+                        <option value="opcion1">Nombre del mecanico</option>
+                        <option value="opcion2">Categoria de atencion</option>
+                        <option value="opcion3">Palabra clave</option>
+                      </select>
+                      <div class="input-group-append">
+                        <button class="btn btn-outline-secondary" type="button">Aplicar filtro</button>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container">
+      <h1 class="text-center mt-5 mb-5">TRABAJOS REALIZADOS</h1>
+      <div class="row">
+        <div class="col-md-4">
+          <div class="thumbnail">
+            <img src="Img/BMW_118.jpg" alt="BMW 118">
+            <h4>Diagnóstico Mecánico BMW 118: </h4>
+              <h5>La batería está descargada y necesita ser reemplazada.</h5>
+            <p>Fecha: 02/01/2023</p>
+            <ul>
+              <li>Batería nueva</li>
+              <li>llave de tubo</li>
+              <li>destornillador</li>
+            </ul>
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal1">
+                GALERIA
+              </button>
+              
+              <div class="modal fade" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                <div class="modal-dialog" role="document">
+                  <div class="modal-content">
+                    <div class="modal-body">
+                      <img src="Img/mecanico1.jpeg" class="img-fluid" alt="mecanico1">
+                    
+                    </div>
+                </div>
+              </div>
+            </div>
+        </div>
+
+
+          
+        </div>
+        <div class="col-md-4">
+          <div class="thumbnail">
+            <img src="Img/BMW_120.jpg" alt="BMW 120">
+            <h4>Diagnóstico Mecánico BMW 118: </h4>
+            <h5>El filtro de aire está sucio y necesita ser reemplazado.</h5>
+            <p>Fecha: 02/03/2023</p>
+            <ul>
+              <li>Filtro de aire nuevo</li>
+              <li>destornillador</li>
+              <li>guantes de seguridad</li>
+            </ul>
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal2">
+                GALERIA
+              </button>
+              
+              <div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                <div class="modal-dialog" role="document">
+                  <div class="modal-content">
+                    <div class="modal-body">
+                      <img src="Img/mecanico2.jpeg" class="img-fluid" alt="mecanico2">
+                    </div>
+                </div>
+              </div>
+            </div>
+        </div>
+
+
+          
+        </div>
+        <div class="col-md-4">
+            <div class="thumbnail">
+              <img src="Img/BMW_220i.jpg" alt="BMW 220i">
+              <h4>Diagnóstico Mecánico BMW 118: </h4>
+              <h5>Hay una fuga de líquido de frenos en la línea de frenos trasera.</h5>
+              <p>Fecha: 02/02/2022</p>
+              <ul>
+                <li>Línea de freno trasera nueva</li>
+                <li>llave de tubo, destornillador</li>
+                <li>líquido de frenos de alta calidad</li>
+              </ul>
+              <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal3">
+                GALERIA
+              </button>
+              
+              <div class="modal fade" id="myModal3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                <div class="modal-dialog" role="document">
+                  <div class="modal-content">
+                    <div class="modal-body">
+                      <img src="Img/mecanico3.jpeg" class="img-fluid" alt="mecanico3">
+                    </div>
+                </div>
+              </div>
+            </div>
+        </div>
+
+
+          
+        </div>
+          <div class="col-md-4">
+            <div class="thumbnail">
+              <img src="Img/BMW4.jpg" alt="BMW 4">
+              <h4>Diagnóstico Mecánico BMW 118: </h4>
+              <h5>El neumático trasero izquierdo está pinchado y necesita ser reemplazado.</h5>
+              <p>Fecha: 12/01/2023</p>
+              <ul>
+                <li>Neumático nuevo</li>
+                <li>gato hidráulico</li>
+                <li> llave de tuercas</li>
+              </ul>
+              <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal4">
+                GALERIA
+              </button>
+              
+              <div class="modal fade" id="myModal4" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                <div class="modal-dialog" role="document">
+                  <div class="modal-content">
+                    <div class="modal-body">
+                      <img src="Img/mecanico4.jpeg" class="img-fluid" alt="mecanico4">
+                    </div>
+                </div>
+              </div>
+            </div>
+        </div>
+
+
+          
+        </div>
+          <div class="col-md-4">
+            <div class="thumbnail">
+              <img src="Img/DFM_H30cross.jpg" alt="DFM H30 CROSS">
+              <h4>Diagnóstico Mecánico BMW 118: </h4>
+              <h5>El sensor de oxígeno delantero izquierdo está defectuoso y necesita ser reemplazado.</h5>
+              <p>Fecha: 29/03/2022</p>
+              <ul>
+                <li>Sensor de oxígeno nuevo</li>
+                <li>llave de tubo, destornillador</li>
+                <li>guantes de seguridad</li>
+              </ul>
+              <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal5">
+                GALERIA
+              </button>
+              
+              <div class="modal fade" id="myModal5" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                <div class="modal-dialog" role="document">
+                  <div class="modal-content">
+                    <div class="modal-body">
+                      <img src="Img/mecanico5.jpeg" class="img-fluid" alt="mecanico5">
+                    </div>
+                </div>
+              </div>
+            </div>
+        </div>
+
+
+          
+        </div>
+          <div class="col-md-4">
+            <div class="thumbnail">
+              <img src="Img/LIFAN_x7.jpg" alt="LIFAN X7">
+              <h4>Diagnóstico Mecánico BMW 118: </h4>
+              <h5>Las pastillas de freno delanteras están desgastadas y necesitan ser reemplazadas.</h5>
+              <p>Fecha: 13/02/2022</p>
+              <ul>
+                <li>Juego de pastillas de freno delanteras nuevas</li>
+                <li>grasa de freno</li>
+                <li>líquido de frenos de alta calidad</li>
+              </ul>
+              <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal6">
+                GALERIA
+              </button>
+              <div class="modal fade" id="myModal6" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                <div class="modal-dialog" role="document">
+                  <div class="modal-content">
+                    <div class="modal-body">
+                      <img src="Img/mecanico6.jpeg" class="img-fluid" alt="mecanico6">
+                    </div>
+                </div>
+              </div>
+            </div>
+        </div>
+
+
+        </div>
+</body>
