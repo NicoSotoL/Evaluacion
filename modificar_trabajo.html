@@ -14,7 +14,27 @@
   <link href="CSS/Index.css" rel="stylesheet">
   <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/brands.js" integrity="sha384-sCI3dTBIJuqT6AwL++zH7qL8ZdKaHpxU43dDt9SyOzimtQ9eyRhkG3B7KMl6AO19" crossorigin="anonymous"></script>
 <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/fontawesome.js" integrity="sha384-7ox8Q2yzO/uWircfojVuCQOZl+ZZBg2D2J5nkpLqzH1HY0C1dHlTKIbpRz/LG23c" crossorigin="anonymous"></script>
-
+<style>
+  .container {
+      max-width: 600px;
+      margin: 0 auto;
+  }
+  .form-control:focus {
+      border-color: #c5cae9;
+      box-shadow: none;
+  }
+  .form-floating label {
+      color: #6c757d;
+  }
+  .btn-primary {
+      background-color: #4a7fff;
+      border-color: #4a7fff;
+  }
+  .btn-primary:hover, .btn-primary:focus {
+      background-color: #304ffe;
+      border-color: #304ffe;
+  }
+</style>
 </head>
 <body>
 
@@ -22,7 +42,7 @@
 
         <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #a0191f;">
           <div class="container-fluid">
-            <a class="navbar-brand" href="indexadmin.html"><img src="logotallerrayomkeen.png" alt="Rayo Makween" width="40"
+            <a class="navbar-brand" href="IndexA.html"><img src="logotallerrayomkeen.png" alt="Rayo Makween" width="40"
                 height="34">Rayo Makween - Modo Administrador</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
               aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -31,10 +51,10 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
               <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                  <a class="nav-link disabled" aria-current="page" href="indexadmin.html">Inicio</a>
+                  <a class="nav-link disabled" aria-current="page" href="IndexA.html">Inicio</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="agenda_mecanicos.html">Agenda Mecanicos</a>
+                  <a class="nav-link" href="Agenda_mecanicos.html">Agenda Mecanicos</a>
                 </li>
                 <li class="nav-item dropdown">
                   <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
@@ -42,8 +62,8 @@
                     Revision de trabajos 
                   </a>
                   <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="modificar_trabajo.html">Revision de trabajos realizados</a></li>
-                    <li><a class="dropdown-item" href="eliminar_agendamiento.html">Eliminar agendamiento</a></li>
+                    <li><a class="dropdown-item" href="Modificar_trabajo.html">Revision de trabajos realizados</a></li>
+                    <li><a class="dropdown-item" href="Eliminar_agendamiento.html">Eliminar agendamiento</a></li>
                   </ul>
                 </li>
               </ul>
@@ -62,40 +82,44 @@
     
       </header>
 
-	<div class="container mt-5">
-		<h1>Editar Trabajo</h1>
-		<form>
-			<div class="form-group">
-				<label for="trabajo">Selecciona el trabajo a editar:</label>
-				<select class="form-control" id="trabajo" name="trabajo">
-					<option value="1">Cambio de aceite</option>
-					<option value="2">Reparación de frenos</option>
-					<option value="3">Cambio de neumáticos</option>
-				</select>
-			</div>
-			<div class="form-group">
-				<label for="auto">Auto:</label>
-				<input type="text" class="form-control" id="auto" name="auto">
-			</div>
-			<div class="form-group">
-				<label for="modelo">Modelo:</label>
-				<input type="text" class="form-control" id="modelo" name="modelo">
-			</div>
-			<div class="form-group">
-				<label for="problema">Descripción del problema:</label>
-				<textarea class="form-control" id="problema" name="problema"></textarea>
-			</div>
-			<button type="submit" class="btn btn-primary">Guardar Cambios</button>
-		</form>
-		<br>
-		<div class="form-check">
-			<input class="form-check-input" type="checkbox" id="check" name="check">
-			<label class="form-check-label" for="check">Completado</label>
-		</div>
-        <div class="form-check">
-			<input class="form-check-input" type="checkbox" id="check" name="check">
-			<label class="form-check-label" for="check">Rechazado</label>
-		</div>
-	</div>
+<div class="container mt-5">
+  <form>
+      <h1 class="text-center mb-4">Editar Trabajo de Mecánica</h1>
+      <div class="form-floating mb-3">
+          <select class="form-select" id="trabajo" name="trabajo">
+              <option value=""></option>
+              <option value="nose">No se</option>
+              <option value="nosoymecanico">No soy mecanico</option>
+          </select>
+          <label for="estado">Estado:</label>
+      </div>
+      <div class="form-floating mb-3">
+          <input type="text" class="form-control" id="auto" name="auto" placeholder=" ">
+          <label for="auto">Auto:</label>
+      </div>
+      <div class="form-floating mb-3">
+          <input type="text" class="form-control" id="modelo" name="modelo" placeholder=" ">
+          <label for="modelo">Modelo:</label>
+      </div>
+      <div class="form-floating mb-3">
+          <textarea class="form-control" id="comentario" name="comentario" placeholder=" "></textarea>
+          <label for="comentario">Comentario:</label>
+      </div>
+      <div class="form-floating mb-3">
+          <select class="form-select" id="estado" name="estado">
+              <option value=""></option>
+              <option value="completado">Completado</option>
+              <option value="rechazado">Rechazado</option>
+          </select>
+          <label for="estado">Estado:</label>
+      </div>
+      <div class="text-center">
+          <button type="submit" class="btn btn-primary">Guardar</button>
+      </div>
+  </form>
+</div>
 </body>
+
+
+
 </html>
