@@ -70,23 +70,6 @@
           <div class="card-body">
             <h4 class="card-title text-center mb-4">Iniciar sesión</h4>
             <form action="#" method="post">
-              <div class="mb-3 text-center">
-                <label for="tipo-usuario" class="form-label">Tipo de usuario</label>
-                <div class="d-flex justify-content-center">
-                  <div class="form-check form-switch me-2">
-                    <input class="form-check-input" type="radio" id="radio-cliente" name="tipo-usuario" value="cliente" checked>
-                    <label class="form-check-label" for="radio-cliente">Cliente</label>
-                  </div>
-                  <div class="form-check form-switch">
-                    <input class="form-check-input" type="radio" id="radio-admin" name="tipo-usuario" value="admin">
-                    <label class="form-check-label" for="radio-admin">Administrador</label>
-                  </div>
-                  <div class="form-check form-switch">
-                    <input class="form-check-input" type="radio" id="radio-mecanico" name="tipo-usuario" value="Mecanico">
-                    <label class="form-check-label" for="radio-mecanico">Mecanico</label>
-                  </div>
-                </div>
-              </div>
               <div class="mb-3">
                 <label for="email" class="form-label">Correo electrónico</label>
                 <input type="email" class="form-control" id="email" name="email" required>
@@ -107,9 +90,11 @@
             </form>
             <div class="text-center mt-3">
               <a href="#">¿Olvidaste tu contraseña?</a>
+              <a href="LoginA.html" class="btn btn-primary btn-sm">Administrador</a>
             </div>
             <div class="text-center mt-3">
               <a href="Registro.html">¿Aun no tienes cuenta?</a>
+              <a href="LoginM.html" class="btn btn-primary btn-sm">Mecánico</a>
             </div>
           </div>
         </div>
