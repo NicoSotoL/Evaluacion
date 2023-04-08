@@ -14,8 +14,40 @@
   <link href="CSS/TrabajosR.css" rel="stylesheet">
   <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/brands.js" integrity="sha384-sCI3dTBIJuqT6AwL++zH7qL8ZdKaHpxU43dDt9SyOzimtQ9eyRhkG3B7KMl6AO19" crossorigin="anonymous"></script>
 <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/fontawesome.js" integrity="sha384-7ox8Q2yzO/uWircfojVuCQOZl+ZZBg2D2J5nkpLqzH1HY0C1dHlTKIbpRz/LG23c" crossorigin="anonymous"></script>
-
-</head>
+         <style>
+      .thumbnail img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+      }
+      .thumbnail h4 {
+        margin-top: 1rem;
+        font-weight: bold;
+      }
+      .gallery {
+        display: none;
+      }
+      .gallery.active {
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 1rem;
+      }
+      .gallery.active img {
+        width: 100%;
+        height: 150px;
+        margin-right: 1rem;
+        margin-bottom: 1rem;
+        object-fit: cover;
+        cursor: pointer;
+      }
+      .gallery.active img:last-child {
+        margin-right: 0;
+      }
+      .gallery.active img:hover {
+        opacity: 0.8;
+      }
+    </style>
+  </head>
 
 <body>
 
@@ -85,8 +117,7 @@
               <div class="modal-dialog" role="document">
                 <div class="modal-content">
                   <div class="modal-body">
-                    <img src="mecanico1.jpeg" class="img-fluid" alt="mecanico1">
-                  
+                    <img src="img/Mecanicos/mecanico1.jpeg" class="img-fluid" alt="mecanico1"> 
                   </div>
               </div>
             </div>
@@ -115,7 +146,7 @@
               <div class="modal-dialog" role="document">
                 <div class="modal-content">
                   <div class="modal-body">
-                    <img src="mecanico2.jpeg" class="img-fluid" alt="mecanico2">
+                    <img src="img/Mecanicos/mecanico2.jpeg" class="img-fluid" alt="mecanico2">
                   </div>
               </div>
             </div>
@@ -144,7 +175,7 @@
               <div class="modal-dialog" role="document">
                 <div class="modal-content">
                   <div class="modal-body">
-                    <img src="mecanico3.jpeg" class="img-fluid" alt="mecanico3">
+                    <img src="img/Mecanicos/mecanico3.jpeg" class="img-fluid" alt="mecanico3">
                   </div>
               </div>
             </div>
@@ -173,7 +204,7 @@
               <div class="modal-dialog" role="document">
                 <div class="modal-content">
                   <div class="modal-body">
-                    <img src="mecanico4.jpeg" class="img-fluid" alt="mecanico4">
+                    <img src="img/mecanicos/mecanico4.jpeg" class="img-fluid" alt="mecanico4">
                   </div>
               </div>
             </div>
@@ -202,7 +233,7 @@
               <div class="modal-dialog" role="document">
                 <div class="modal-content">
                   <div class="modal-body">
-                    <img src="mecanico5.jpeg" class="img-fluid" alt="mecanico5">
+                    <img src="img/Mecanicos/mecanico5.jpeg" class="img-fluid" alt="mecanico5">
                   </div>
               </div>
             </div>
@@ -230,10 +261,10 @@
               <div class="modal-dialog" role="document">
                 <div class="modal-content">
                   <div class="modal-body">
-                    <img src="mecanico6.jpeg" class="img-fluid" alt="mecanico6">
+                    <img src="Img/Mecanicos/mecanico6.jpeg" class="img-fluid" alt="mecanico6">
                   </div>
               </div>
-           </div>
+            </div>
           </div>
       </div>
 
