@@ -1,0 +1,17 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "../CSS"
+		},
+		{
+			"path": "../Img"
+		},
+		{
+			"path": "../IndexAdmin"
+		}
+	],
+	"settings": {}
+}
