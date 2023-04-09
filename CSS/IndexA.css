@@ -1,31 +1,30 @@
 
 .container {
-    margin-top: 60px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-  }
+  margin-top: 60px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
 
-  .item {
-    flex-basis: calc(25% - 10px);
-    margin-bottom: 20px;
-    text-align: center;
-  }
+.item {
+  flex-basis: calc(25% - 10px);
+  margin-bottom: 20px;
+  text-align: center;
+}
 
-  .item img {
-    max-width: 45%;
-    height: auto;
-  }
+.item img {
+  max-width: 45%;
+  height: auto;
+}
 
-  .item h5 {
-    margin-top: 20px;
-  }
+.item h5 {
+  margin-top: 20px;
+}
 
-  .item p {
-    margin-top: 5px;
-  }
-
-  footer {
+.item p {
+  margin-top: 5px;
+}
+footer {
     background-color: #333;
     color: #fff;
     padding: 50px 0;
