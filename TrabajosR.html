@@ -100,11 +100,13 @@
           </ul>
           <form class="d-flex" role="search">
             <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
-            <select class="form-control">
+            <select class="form-select" id="Opcion" name="Opcion">
+              <option value="0" disabled selected>filtrar</option>
               <option value="nombre-mecanico">Nombre del Mecánico</option>
               <option value="categoria-atencion">Categoría de atención</option>
               <option value="palabra-clave">Palabra clave</option>
-            </select>
+              <section>
+          </select>
             <button class="btn btn-light" type="submit">Buscar</button>
           </form>
         </div>
@@ -114,7 +116,6 @@
   </header>
   <br>
 
-  <section>
     <div class="container text-center">
       <div class="row align-items-center justify-content-center d-flex"> 
         <h5 class="mb-3">CANTIDAD DE MANTENCIONES POR MECANICO</h5>
