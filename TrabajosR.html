@@ -12,42 +12,55 @@
     integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
     crossorigin="anonymous"></script>
   <link href="CSS/TrabajosR.css" rel="stylesheet">
-  <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/brands.js" integrity="sha384-sCI3dTBIJuqT6AwL++zH7qL8ZdKaHpxU43dDt9SyOzimtQ9eyRhkG3B7KMl6AO19" crossorigin="anonymous"></script>
-<script defer src="https://use.fontawesome.com/releases/v5.0.8/js/fontawesome.js" integrity="sha384-7ox8Q2yzO/uWircfojVuCQOZl+ZZBg2D2J5nkpLqzH1HY0C1dHlTKIbpRz/LG23c" crossorigin="anonymous"></script>
-         <style>
-      .thumbnail img {
-        width: 100%;
-        height: 200px;
-        object-fit: cover;
-      }
-      .thumbnail h4 {
-        margin-top: 1rem;
-        font-weight: bold;
-      }
-      .gallery {
-        display: none;
-      }
-      .gallery.active {
-        display: flex;
-        flex-wrap: wrap;
-        margin-top: 1rem;
-      }
-      .gallery.active img {
-        width: 100%;
-        height: 150px;
-        margin-right: 1rem;
-        margin-bottom: 1rem;
-        object-fit: cover;
-        cursor: pointer;
-      }
-      .gallery.active img:last-child {
-        margin-right: 0;
-      }
-      .gallery.active img:hover {
-        opacity: 0.8;
-      }
-    </style>
-  </head>
+  <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/brands.js"
+    integrity="sha384-sCI3dTBIJuqT6AwL++zH7qL8ZdKaHpxU43dDt9SyOzimtQ9eyRhkG3B7KMl6AO19"
+    crossorigin="anonymous"></script>
+  <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/fontawesome.js"
+    integrity="sha384-7ox8Q2yzO/uWircfojVuCQOZl+ZZBg2D2J5nkpLqzH1HY0C1dHlTKIbpRz/LG23c"
+    crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  <style>
+    .thumbnail img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .thumbnail h4 {
+      margin-top: 1rem;
+      font-weight: bold;
+    }
+
+    .gallery {
+      display: none;
+    }
+
+    .gallery.active {
+      display: flex;
+      flex-wrap: wrap;
+      margin-top: 1rem;
+    }
+
+    .gallery.active img {
+      width: 100%;
+      height: 150px;
+      margin-right: 1rem;
+      margin-bottom: 1rem;
+      object-fit: cover;
+      cursor: pointer;
+    }
+
+    .gallery.active img:last-child {
+      margin-right: 0;
+    }
+
+    .gallery.active img:hover {
+      opacity: 0.8;
+    }
+  </style>
+</head>
 
 <body>
 
@@ -77,7 +90,7 @@
               <ul class="dropdown-menu">
                 <li><a class="dropdown-item disabled" href="trabajosR.html">Trabajos realizados</a></li>
                 <li><a class="dropdown-item" href="Agendar.html">Agendar mantenimiento</a></li>
-              </ul> 
+              </ul>
             </li>
           </ul>
           <ul class="navbar-nav mb-2 mb-lg-0 justify-content-end">
@@ -94,69 +107,69 @@
     </nav>
 
   </header>
-<section>
-  <div class="container">
-    <h1 class="text-center mt-5 mb-5">TRABAJOS REALIZADOS</h1>
-    <div class="row">
-      <div class="col-md-4">
-        <div class="thumbnail">
-          <img src="Img/Autos/BMW_118.jpg" alt="BMW 118" style="max-width: 100%; aspect-ratio: 16/9;">
-          <h4>Diagnóstico Mecánico BMW 118: </h4>
+  <section>
+    <div class="container">
+      <h1 class="text-center mt-5 mb-5">TRABAJOS REALIZADOS</h1>
+      <div class="row">
+        <div class="col-md-4">
+          <div class="thumbnail">
+            <img src="Img/Autos/BMW_118.jpg" alt="BMW 118" style="max-width: 100%; aspect-ratio: 16/9;">
+            <h4>Diagnóstico Mecánico BMW 118: </h4>
             <h5>La batería está descargada y necesita ser reemplazada.</h5>
-          <p>Fecha: 02/01/2023</p>
-          <ul>
-            <li>Batería nueva</li>
-            <li>llave de tubo</li>
-            <li>destornillador</li>
-          </ul>
-          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal1">
+            <p>Fecha: 02/01/2023</p>
+            <ul>
+              <li>Batería nueva</li>
+              <li>llave de tubo</li>
+              <li>destornillador</li>
+            </ul>
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal1">
               GALERIA
             </button>
-            
+
             <div class="modal fade" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
               <div class="modal-dialog" role="document">
                 <div class="modal-content">
                   <div class="modal-body">
-                    <img src="img/Mecanicos/mecanico1.jpeg" class="img-fluid" alt="mecanico1"> 
+                    <img src="img/Mecanicos/mecanico1.jpeg" class="img-fluid" alt="mecanico1">
                   </div>
+                </div>
               </div>
             </div>
           </div>
-      </div>
 
 
-        
-      </div>
-      <div class="col-md-4">
-        <div class="thumbnail">
-          <img src="Img/Autos/BMW_120.jpg" alt="BMW 118" style="max-width: 100%; aspect-ratio: 16/9;">
-          <h4>Diagnóstico Mecánico BMW 118: </h4>
-          <h5>El filtro de aire está sucio y necesita ser reemplazado.</h5>
-          <p>Fecha: 02/03/2023</p>
-          <ul>
-            <li>Filtro de aire nuevo</li>
-            <li>destornillador</li>
-            <li>guantes de seguridad</li>
-          </ul>
-          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal2">
+
+        </div>
+        <div class="col-md-4">
+          <div class="thumbnail">
+            <img src="Img/Autos/BMW_120.jpg" alt="BMW 118" style="max-width: 100%; aspect-ratio: 16/9;">
+            <h4>Diagnóstico Mecánico BMW 118: </h4>
+            <h5>El filtro de aire está sucio y necesita ser reemplazado.</h5>
+            <p>Fecha: 02/03/2023</p>
+            <ul>
+              <li>Filtro de aire nuevo</li>
+              <li>destornillador</li>
+              <li>guantes de seguridad</li>
+            </ul>
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal2">
               GALERIA
             </button>
-            
+
             <div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
               <div class="modal-dialog" role="document">
                 <div class="modal-content">
                   <div class="modal-body">
                     <img src="img/Mecanicos/mecanico2.jpeg" class="img-fluid" alt="mecanico2">
                   </div>
+                </div>
               </div>
             </div>
           </div>
-      </div>
 
 
-        
-      </div>
-      <div class="col-md-4">
+
+        </div>
+        <div class="col-md-4">
           <div class="thumbnail">
             <img src="Img/Autos/BMW_220i.jpg" alt="BMW 118" style="max-width: 100%; aspect-ratio: 16/9;">
             <h4>Diagnóstico Mecánico BMW 118: </h4>
@@ -170,21 +183,21 @@
             <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal3">
               GALERIA
             </button>
-            
+
             <div class="modal fade" id="myModal3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
               <div class="modal-dialog" role="document">
                 <div class="modal-content">
                   <div class="modal-body">
                     <img src="img/Mecanicos/mecanico3.jpeg" class="img-fluid" alt="mecanico3">
                   </div>
+                </div>
               </div>
             </div>
           </div>
-      </div>
 
 
-        
-      </div>
+
+        </div>
         <div class="col-md-4">
           <div class="thumbnail">
             <img src="Img/Autos/BMW4.jpg" alt="BMW 118" style="max-width: 100%; aspect-ratio: 16/9;">
@@ -199,21 +212,21 @@
             <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal4">
               GALERIA
             </button>
-            
+
             <div class="modal fade" id="myModal4" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
               <div class="modal-dialog" role="document">
                 <div class="modal-content">
                   <div class="modal-body">
                     <img src="img/mecanicos/mecanico4.jpeg" class="img-fluid" alt="mecanico4">
                   </div>
+                </div>
               </div>
             </div>
           </div>
-      </div>
 
 
-        
-      </div>
+
+        </div>
         <div class="col-md-4">
           <div class="thumbnail">
             <img src="Img/Autos/DFM_H30cross.jpg" alt="BMW 118" style="max-width: 100%; aspect-ratio: 16/9;">
@@ -228,21 +241,21 @@
             <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal5">
               GALERIA
             </button>
-            
+
             <div class="modal fade" id="myModal5" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
               <div class="modal-dialog" role="document">
                 <div class="modal-content">
                   <div class="modal-body">
                     <img src="img/Mecanicos/mecanico5.jpeg" class="img-fluid" alt="mecanico5">
                   </div>
+                </div>
               </div>
             </div>
           </div>
-      </div>
 
 
-        
-      </div>
+
+        </div>
         <div class="col-md-4">
           <div class="thumbnail">
             <img src="Img/Autos/LIFAN_x7.jpg" alt="BMW 118" style="max-width: 100%; aspect-ratio: 16/9;">
@@ -263,37 +276,37 @@
                   <div class="modal-body">
                     <img src="Img/Mecanicos/mecanico6.jpeg" class="img-fluid" alt="mecanico6">
                   </div>
+                </div>
               </div>
             </div>
           </div>
-      </div>
 
 
-      </div>
+        </div>
 </body>
 </section>
-  <footer>
-    <div class="container2">
-      <div class="logo">
-        <img src="Img/logotallerrayomkeen.png" alt="Logo de Rayo Makween">
-      </div>
-      <div class="info">
-        <h3>Rayo Makween</h3>
-        <p>Taller mecánico</p>
-        <p>Calle Diosito, Santiago</p>
-        <p>Teléfono: (569) 5555-5555</p>
-        <p>Correo electrónico: info@rayomakween.com</p>
-      </div>
-      <div class="social">
-        <h3>Síguenos en redes sociales</h3>
-        <ul>
-          <li><a href="#"><i class="fab fa-facebook"></i></a></li>
-          <li><a href="https://twitter.com/flatfis48779026"><i class="fab fa-twitter"></i></a></li>
-          <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-        </ul>
-      </div>
+<footer>
+  <div class="container2">
+    <div class="logo">
+      <img src="Img/logotallerrayomkeen.png" alt="Logo de Rayo Makween">
     </div>
-  </footer>
+    <div class="info">
+      <h3>Rayo Makween</h3>
+      <p>Taller mecánico</p>
+      <p>Calle Diosito, Santiago</p>
+      <p>Teléfono: (569) 5555-5555</p>
+      <p>Correo electrónico: info@rayomakween.com</p>
+    </div>
+    <div class="social">
+      <h3>Síguenos en redes sociales</h3>
+      <ul>
+        <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+        <li><a href="https://twitter.com/flatfis48779026"><i class="fab fa-twitter"></i></a></li>
+        <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
 </body>
 
 </html>
