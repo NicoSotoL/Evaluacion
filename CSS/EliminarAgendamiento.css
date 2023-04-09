@@ -1,4 +1,6 @@
-
+select #default {
+  color: orangered;
+}
 footer {
   background-color: #333;
   color: #fff;
