@@ -11,19 +11,20 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
     crossorigin="anonymous"></script>
-  <link href="CSS/Index.css" rel="stylesheet">
+  <link href="CSS/IndexA.css" rel="stylesheet">
   <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/brands.js" integrity="sha384-sCI3dTBIJuqT6AwL++zH7qL8ZdKaHpxU43dDt9SyOzimtQ9eyRhkG3B7KMl6AO19" crossorigin="anonymous"></script>
 <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/fontawesome.js" integrity="sha384-7ox8Q2yzO/uWircfojVuCQOZl+ZZBg2D2J5nkpLqzH1HY0C1dHlTKIbpRz/LG23c" crossorigin="anonymous"></script>
 
 </head>
 
 <body>
+
   <header>
 
     <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #a0191f;">
       <div class="container-fluid">
-        <a class="navbar-brand" href="Index.html"><img src="Img/logotallerrayomkeen.png" alt="Rayo Makween" width="40"
-            height="34">Rayo Makween</a>
+        <a class="navbar-brand" href="IndexA.html"><img src="Img/logotallerrayomkeen.png" alt="Rayo Makween" width="40"
+            height="34">Rayo Makween-Admin</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
           aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -31,25 +32,25 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link disabled" aria-current="page" href="Index.html">Inicio</a>
+              <a class="nav-link disabled" aria-current="page" href="IndexA.html">Inicio</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="Nosotros.html">Nosotros</a>
+              <a class="nav-link" href="AgendaM.html">Agenda Mecanicos</a>
             </li>
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
                 aria-expanded="false">
-                Trabajos
+                Revision de trabajos 
               </a>
               <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="trabajosR.html">Trabajos realizados</a></li>
-                <li><a class="dropdown-item" href="Agendar.html">Agendar mantenimiento</a></li>
+                <li><a class="dropdown-item" href="ModificarT.html">Revision de trabajos realizados</a></li>
+                <li><a class="dropdown-item" href="EliminarAgendamiento.html">Eliminar agendamiento</a></li>
               </ul>
             </li>
           </ul>
           <ul class="navbar-nav mb-2 mb-lg-0 justify-content-end">
             <li class="nav-item">
-              <a class="nav-link" href="Login.html">Login</a>
+              <a class="nav-link" href="Index.html">Salir</a>
             </li>
           </ul>
           <form class="d-flex" role="search">
@@ -61,57 +62,71 @@
     </nav>
 
   </header>
-  <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
-    <div class="carousel-indicators">
-      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
-        aria-current="true" aria-label="Slide 1"></button>
-      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
-        aria-label="Slide 2"></button>
-      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
-        aria-label="Slide 3"></button>
+
+
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-3 col-md-6">
+        <div class="card bg-success text-white mb-3">
+          <div class="card-body">
+            <h3>Actividades Diarias</h3>
+            <hr>
+            <ul>
+              <li>Cambio de aceite</li>
+              <li>Alineación y balanceo</li>
+              <li>Revisión de frenos</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6">
+        <div class="card bg-primary text-white mb-3">
+          <div class="card-body">
+            <h3>Citas Programadas</h3>
+            <hr>
+            <ul>
+              <li>09:00 am - Chevrolet Aveo</li>
+              <li>11:30 am - Ford Mustang</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6">
+        <div class="card bg-primary text-white mb-3">
+          <div class="card-body">
+            <h3>Trabajos en Curso</h3>
+            <hr>
+            <ul>
+              <li>Chevrolet Spark - Cambio de aceite</li>
+              <li>Nissan Sentra - Revisión de frenos</li>
+              <li>Volkswagen Jetta - Cambio de llantas</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6">
+        <div class="card bg-warning text-white mb-3">
+          <div class="card-body">
+            <h3>Inventario</h3>
+            <hr>
+            <ul>
+              <li>Llave de tuercas</li>
+              <li>Destornillador Phillips</li>
+              <li>Pinzas de punta</li>
+              <li>Alicate universal</li>
+            </ul>
+            <button class="btn btn-dark">Agregar/Quitar producto</button>
+          </div>
+        </div>
+      </div>
     </div>
-    <div class="carousel-inner">
-      <div class="carousel-item active" data-bs-interval="6000">
-        <img src="Img/Autos/LIFAN.jpg" class="d-block w-100" alt="auto">
-        <div class="carousel-caption d-none d-md-block">
-          <h5>LIFAN X60</h5>
-          <p>Las pastillasLorem ipsum dolor sit amet consectetur adipisicing elit.
-            Quae, quam eveniet magnam, incidunt ducimus saepe ratione qui et voluptas veritatis obcaecati pariatur
-            laborum,
-            est doloremque possimus quasi. Fuga corporis maiores ipsa placeat exercitationem cupiditate. de freno
-            delanteras están desgastadas y necesitan ser reemplazadas.</p>
-        </div>
-      </div>
-      <div class="carousel-item">
-        <img src="Img/Autos/BMW.jpg" class="d-block w-100" alt="no se">
-        <div class="carousel-caption d-none d-md-block">
-          <h5>BMW 220i</h5>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Quae, quam eveniet magnam, incidunt ducimus saepe ratione qui et voluptas veritatis obcaecati pariatur
-            laborum,
-            est doloremque possimus quasi. Fuga corporis maiores ipsa placeat exercitationem cupiditate.</p>
-        </div>
-      </div>
-      <div class="carousel-item">
-        <img src="Img/Autos/DFM.jpg" class="d-block w-100" alt="no cacho de autos">
-        <div class="carousel-caption d-none d-md-block">
-          <h5>DFM H30 CROSS</h5>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Quae, quam eveniet magnam, incidunt ducimus saepe ratione qui et voluptas veritatis obcaecati pariatur
-            laborum,
-            est doloremque possimus quasi. Fuga corporis maiores ipsa placeat exercitationem cupiditate.</p>
-        </div>
-      </div>
-    </div>
-    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Anterior</span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Siguiente</span>
-    </button>
   </div>
+
+
+
+
+
+
   <div class="container">
     <div class="item">
       <img src="Img/Icons/Mecanico.png" alt="Imagen 1">
@@ -160,7 +175,7 @@
         </ul>
       </div>
     </div>
-  </footer
+  </footer>
 </body>
 
 </html>
