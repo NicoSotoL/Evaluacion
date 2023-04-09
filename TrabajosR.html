@@ -98,24 +98,44 @@
               <a class="nav-link" href="Login.html">Login</a>
             </li>
           </ul>
-          <form class="d-flex" role="search">
-            <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
-            <select class="form-select" id="Opcion" name="Opcion">
-              <option value="0" disabled selected>filtrar</option>
-              <option value="nombre-mecanico">Nombre del Mecánico</option>
-              <option value="categoria-atencion">Categoría de atención</option>
-              <option value="palabra-clave">Palabra clave</option>
-              <section>
-          </select>
-            <button class="btn btn-light" type="submit">Buscar</button>
+          <form class="d-flex">
+            <div class="input-group">
+              <input class="form-control" type="search" placeholder="Buscar" aria-label="Search">
+              <button class="btn btn-light" type="submit">Buscar</button>
+            </div>
           </form>
         </div>
       </div>
     </nav>
 
   </header>
-  <br>
 
+  
+  
+  <div class="filter-container">
+    <h2>Encuentra un mecánico:</h2>
+    <form>
+      <div class="search-container">
+        <label for="search">Buscar:</label>
+        <input type="text" id="search" name="search" placeholder="Buscar mecánicos...">
+      </div>
+      <div class="select-container">
+        <label for="category">Categoría:</label>
+        <select id="category" name="category">
+          <option value="">Todas</option>
+          <option value="general">General</option>
+          <option value="brakes">Frenos</option>
+          <option value="engine">Motor</option>
+          <option value="transmission">Transmisión</option>
+        </select>
+      </div>
+      <div class="submit-container">
+        <input type="submit" value="Buscar">
+      </div>
+    </form>
+  </div>
+
+  <section>
     <div class="container text-center">
       <div class="row align-items-center justify-content-center d-flex"> 
         <h5 class="mb-3">CANTIDAD DE MANTENCIONES POR MECANICO</h5>
@@ -131,9 +151,6 @@
       </div>
     </div>
   </section>
-  
-  
-
   <section>
     <div class="container">
       <h1 class="text-center mt-5 mb-5">TRABAJOS REALIZADOS</h1>
@@ -164,7 +181,6 @@
               </div>
             </div>
           </div>
-
 
 
         </div>
@@ -316,8 +332,6 @@
 
 
         </div>
-
-</body>
 </section>
 <footer >
   <div class="container2">

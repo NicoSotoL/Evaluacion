@@ -1,3 +1,15 @@
+
+#ventana-float{
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  padding: 10px;
+  background-color: #a0191f;;
+  color: #fff;
+  border-radius: 5px;
+  font-size: 16px;
+  z-index: 9999;
+}
 .container {
   margin-top: 30px;
   margin-bottom: 30px;
