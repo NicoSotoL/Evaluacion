@@ -69,8 +69,18 @@
     </header>
     <div class="container mt-5">
         <form class="p-3 border rounded">
-            <h1 class="text-center mb-4">Eliminar Trabajo de Mecánica</h1>
+            <h1 class="text-center mb-4">REVISION / INGRESOS DE TRABAJOS</h1>
             <div class="row">
+                <div class="col-sm-6 mb-3">
+                    <div class="form-floating">
+                        <select class="form-select" id="Mecanico" name="Mecanico">
+                            <option value="1">Nicolas Soto</option>
+                            <option value="2">Nicolas Savando</option>
+                            <option value="3">Alvaro Jofre</option>
+                        </select>
+                        <label for="trabajo">Mecanico:</label>
+                    </div>
+                </div>
                 <div class="col-sm-6 mb-3">
                     <div class="form-floating">
                         <select class="form-select" id="trabajo" name="trabajo">
@@ -112,6 +122,9 @@
             </div>
             <div class="text-center">
                 <button type="submit" class="btn btn-danger btn-lg">Eliminar Trabajo</button>
+            </div>
+            <div class="text-center">
+                <button type="submit" class="btn btn-success btn-lg">Aceptar Trabajo</button>
             </div>
         </form>
     </div>
