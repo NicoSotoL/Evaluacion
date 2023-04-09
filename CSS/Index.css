@@ -6,6 +6,10 @@
     justify-content: space-between;
   }
 
+  .texto-negro {
+    color: black
+  }
+
   .item {
     flex-basis: calc(25% - 10px);
     margin-bottom: 20px;
@@ -26,7 +30,7 @@
   }
 
   footer {
-    background-color: #333;
+    background-color: #a0191f;
     color: #fff;
     padding: 50px 0;
   }
