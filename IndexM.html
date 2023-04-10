@@ -24,7 +24,7 @@
     <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #a0191f;">
       <div class="container-fluid">
         <a class="navbar-brand" href="Index.html"><img src="Img/logotallerrayomkeen.png" alt="Rayo Makween" width="40"
-            height="34">Rayo Makween</a>
+            height="34">MAKWEEN MECANICO</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
           aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -32,36 +32,17 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link" aria-current="page" href="Index.html">Inicio</a>
+              <a class="nav-link" aria-current="page" href="IndexM.html">Inicio</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="Nosotros.html">Nosotros</a>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                aria-expanded="false">
-                Trabajos
-              </a>
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="Agendar.html">Agenda tu hora!</a></li>
-                <li><a class="dropdown-item" href="trabajosR.html">Trabajos realizados</a></li>
-              </ul>
-            </li>
+           
+    
           </ul>
           <ul class="navbar-nav mb-2 mb-lg-0 justify-content-end">
             <li class="nav-item">
               <a class="nav-link" href="Login.html">Login</a>
             </li>
           </ul>
-          <form class="d-flex" role="search">
-            <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
-            <select class="form-control">
-              <option value="nombre-mecanico">Nombre del Mecánico</option>
-              <option value="categoria-atencion">Categoría de atención</option>
-              <option value="palabra-clave">Palabra clave</option>
-            </select>
-            <button class="btn btn-light" type="submit">Buscar</button>
-          </form>
+        
         </div>
       </div>
     </nav>
@@ -74,14 +55,37 @@
       <div class="col-md-6">
         <div class="card shadow-sm">
           <div class="card-body">
-            <h4 class="card-title text-center mb-4">Agenda tu cita</h4>
+            <h4 class="card-title text-center mb-4">AGREGAR TRABAJO</h4>
+
+            <div class="form-group">
+              <label for="mecanico">Seleccione mecánico:</label>
+              <select class="form-control" id="mecanico">
+                  <option>Seleccione una opción...</option>
+                  <option>Nicolas Soto</option>
+                  <option>Alvaro Jofre</option>
+                  <option>Nicolas Savando</option>
+              </select>
+          </div>
+
             <form action="#" method="post">
               <div class="mb-3">
-                <label for="nombre" class="form-label">Nombre completo</label>
+                <label for="nombre" class="form-label">Nombre cliente</label>
                 <input type="text" class="form-control" id="nombre" name="nombre" required>
               </div>
               <div class="mb-3">
                 <label for="telefono" class="form-label">Teléfono</label>
+                <input type="tel" class="form-control" id="telefono" name="telefono" required>
+              </div>
+              <div class="mb-3">
+                <label for="telefono" class="form-label">Patente del vehiculo o chasis:</label>
+                <input type="tel" class="form-control" id="telefono" name="telefono" required>
+              </div>
+              <div class="mb-3">
+                <label for="telefono" class="form-label">Marca del vehiculo</label>
+                <input type="tel" class="form-control" id="telefono" name="telefono" required>
+              </div>
+              <div class="mb-3">
+                <label for="telefono" class="form-label">Modelo</label>
                 <input type="tel" class="form-control" id="telefono" name="telefono" required>
               </div>
               <div class="mb-3">
@@ -90,11 +94,11 @@
               </div>
               <div class="row g-2">
                 <div class="col-md">
-                  <label for="fecha" class="form-label">Fecha</label>
+                  <label for="fecha" class="form-label">Fecha de atencion</label>
                   <input type="date" class="form-control" id="fecha" name="fecha" required>
                 </div>
                 <div class="col-md">
-                  <label for="hora" class="form-label">Hora</label>
+                  <label for="hora" class="form-label">Hora de atencion</label>
                   <input type="time" class="form-control" id="hora" name="hora" required>
                 </div>
               </div>
@@ -102,10 +106,14 @@
                 <label for="mensaje" class="form-label">Mensaje (opcional)</label>
                 <textarea class="form-control" id="mensaje" name="mensaje" rows="3"></textarea>
               </div>
-              <div class="text-center">
-                <button type="submit" class="btn btn-primary">Agendar cita</button>
-              </div>
-            </form>
+              <div class="form-group">
+                <label for="foto">Agregar foto:</label>
+                <input type="file" class="form-control-file" id="foto" name="foto">
+            </div>
+            <button type="submit" class="btn btn-primary" id="agregar-trabajo">Agregar Trabajo</button>
+            
+            <button type="button" class="btn btn-secondary" id="limpiar-formulario">Limpiar</button>
+           </form>
           </div>
         </div>
       </div>
