@@ -161,3 +161,26 @@
       text-align: center;
     }
   }
+  .sugerencias {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    border: 1px solid #ccc;
+    border-top: none;
+    max-height: 200px;
+    overflow-y: auto;
+    position: absolute;
+    top: calc(100% + 5px);
+    right: 0;
+    background-color: #fff;
+    z-index: 999;
+  }
+
+  .sugerencias li {
+    padding: 5px;
+    cursor: pointer;
+  }
+
+  .sugerencias li:hover {
+    background-color: #f2f2f2;
+  }
