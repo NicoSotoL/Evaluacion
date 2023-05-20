@@ -8,7 +8,7 @@ function actualizarContador(numeroPersonas) {
 setInterval(function () {
   var numeroOnline = Math.floor(Math.random() * 30) + 1;
   actualizarContador(numeroOnline);
-}, 10000);
+}, 1000);
 //lista de sugerencias
 var campoBusqueda = document.getElementById('campo-busqueda');
 var listaSugerencias = document.getElementById('lista-sugerencias');
