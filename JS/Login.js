@@ -2,7 +2,7 @@ document.getElementById("loginForm").addEventListener("submit", function(event) 
     event.preventDefault();
     var email = document.getElementById("email").value;
     var password = document.getElementById("password").value;
-    var userType = "";
+    var userType = ""; 
 
     if (email === "" || password === "") {
         alert("Por favor, ingresa tu correo electrónico y contraseña.");
@@ -11,7 +11,7 @@ document.getElementById("loginForm").addEventListener("submit", function(event) 
 
     var sanitizedEmail = email.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
     var sanitizedPassword = password.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
-
+ 
     if (sanitizedEmail === "cliente@cuchau.com" && sanitizedPassword === "cliente123") {
         userType = "cliente";
     } else if (sanitizedEmail === "mecanico@cuchau.com" && sanitizedPassword === "mecanico123") {
