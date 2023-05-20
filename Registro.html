@@ -19,6 +19,63 @@
     integrity="sha384-7ox8Q2yzO/uWircfojVuCQOZl+ZZBg2D2J5nkpLqzH1HY0C1dHlTKIbpRz/LG23c"
     crossorigin="anonymous"></script>
 
+    
+  <script>
+    function validateForm() {
+      var firstName = document.forms["registrationForm"]["firstName"].value;
+      var lastName = document.forms["registrationForm"]["lastName"].value;
+      var email = document.forms["registrationForm"]["email"].value;
+      var address = document.forms["registrationForm"]["address"].value;
+      var password = document.forms["registrationForm"]["password"].value;
+      var confirmPassword = document.forms["registrationForm"]["confirmPassword"].value;
+
+      if (firstName == "") {
+        alert("Por favor ingresa tu nombre");
+        return false;
+      }
+
+      if (lastName == "") {
+        alert("Por favor ingresa tus apellidos");
+        return false;
+      }
+
+      if (email == "") {
+        alert("Por favor ingresa tu correo electrónico");
+        return false;
+      }
+
+      if (address == "") {
+        alert("Por favor ingresa tu dirección");
+        return false;
+      }
+
+      if (password == "") {
+        alert("Por favor ingresa una contraseña");
+        return false;
+      }
+
+      if (confirmPassword == "") {
+        alert("Por favor confirma tu contraseña");
+        return false;
+      }
+
+      if (password != confirmPassword) {
+        alert("Las contraseñas no coinciden");
+        return false;
+      }
+    // Validar caracteres genéricos en la contraseña
+    var passwordRegex = /^(?=.*\d)(?=.*[!@#$%^&*()_+\-=[\]{};':"\\|,.<>/?])[a-zA-Z0-9!@#$%^&*()_+\-=[\]{};':"\\|,.<>/?]+$/;
+    if (!passwordRegex.test(password)) {
+      alert("La contraseña debe contener al menos un número y un carácter especial");
+      return false;
+    }
+
+    window.location.href = "Index.html";
+
+    return true;
+  }
+  </script>
+
 </head>
 
 <body>
@@ -75,7 +132,7 @@
         <div class="card shadow-sm">
           <div class="card-body">
             <h4 class="card-title text-center mb-4">Registro de usuario</h4>
-            <form action="#" method="post">
+            <form action="#" method="post" name="registrationForm" onsubmit="return validateForm()">
               <div class="row mb-3">
                 <div class="col">
                   <label for="firstName" class="form-label">Nombres</label>
@@ -105,7 +162,7 @@
                 </div>
               </div>
               <div class="text-center">
-                <button type="submit" class="btn btn-primary">Registrarse</button>
+                <button type="button" class="btn btn-primary" onclick="validateForm()">Registrarse</button>
               </div>
             </form>
           </div>
