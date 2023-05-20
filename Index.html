@@ -18,63 +18,14 @@
   <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/fontawesome.js"
     integrity="sha384-7ox8Q2yzO/uWircfojVuCQOZl+ZZBg2D2J5nkpLqzH1HY0C1dHlTKIbpRz/LG23c"
     crossorigin="anonymous"></script>
-  <script>
-  //lista de sugerencias
-var campoBusqueda = document.getElementById('campo-busqueda');
-var listaSugerencias = document.getElementById('lista-sugerencias');
-
-campoBusqueda.addEventListener('input', function () {
-  var consulta = campoBusqueda.value;
-
-  var sugerencias = obtenerSugerencias(consulta);
-
-  mostrarSugerencias(sugerencias);
-});
-
-function mostrarSugerencias(sugerencias) {
-  listaSugerencias.innerHTML = '';
-
-  sugerencias.forEach(function (sugerencia) {
-    var sugerenciaElemento = document.createElement('li');
-    sugerenciaElemento.textContent = sugerencia;
-
-    sugerenciaElemento.addEventListener('click', function () {
-      campoBusqueda.value = sugerencia;
-      listaSugerencias.innerHTML = '';
-    });
-
-    listaSugerencias.appendChild(sugerenciaElemento);
-  });
-
-  listaSugerencias.style.width = campoBusqueda.offsetWidth + 'px';
-}
-
-document.addEventListener('click', function (event) {
-  if (!campoBusqueda.contains(event.target)) {
-    listaSugerencias.innerHTML = '';
-  }
-});
-
-function obtenerSugerencias(consulta) {
-  var sugerencias = [];
-
-  if (consulta === 'motor') {
-    sugerencias = ['autismo', 'asperger', 'funao'];
-  } else if (consulta === 'choche') {
-    sugerencias = ['esto es una falta de respeto', 'me dicen waton', 'lo editan con editores de video como camtasia studio, adobe premier'];
-  } else if (consulta === 'mecanicos') {
-    sugerencias = ['pastero', 'cocainomano', 'weko'];
-  }
-
-  return sugerencias;
-}
+  <script>    
   </script>
 </head>
 
 <body>
   <header>
 
-      <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #a0191f;">
+    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #a0191f;">
       <div class="container-fluid">
         <a class="navbar-brand" href="Index.html"><img src="Img/logotallerrayomkeen.png" alt="Rayo Makween" width="40"
             height="34">Rayo Makween</a>
@@ -130,7 +81,7 @@ function obtenerSugerencias(consulta) {
     <div class="carousel-inner">
       <div class="carousel-item active" data-bs-interval="6000">
         <a href="TrabajosR.html">
-        <img src="Img/Autos/LIFAN.jpg" class="d-block w-100" alt="auto">
+          <img src="Img/Autos/LIFAN.jpg" class="d-block w-100" alt="auto">
         </a>
         <div class="carousel-caption d-none d-md-block">
           <h5>LIFAN X60</h5>
@@ -143,7 +94,7 @@ function obtenerSugerencias(consulta) {
       </div>
       <div class="carousel-item">
         <a href="TrabajosR.html">
-        <img src="Img/Autos/BMW.jpg" class="d-block w-100" alt="no se">
+          <img src="Img/Autos/BMW.jpg" class="d-block w-100" alt="no se">
         </a>
         <div class="carousel-caption d-none d-md-block">
           <h5>BMW 220i</h5>
@@ -155,7 +106,7 @@ function obtenerSugerencias(consulta) {
       </div>
       <div class="carousel-item">
         <a href="TrabajosR.html">
-        <img src="Img/Autos/DFM.jpg" class="d-block w-100" alt="no cacho de autos">
+          <img src="Img/Autos/DFM.jpg" class="d-block w-100" alt="no cacho de autos">
         </a>
         <div class="carousel-caption d-none d-md-block">
           <h5>DFM H30 CROSS</h5>
@@ -205,19 +156,8 @@ function obtenerSugerencias(consulta) {
   <div id="ventana-float">
     <span id="contador">1</span> personas en línea
   </div>
-  <script>
+  <script src="JS/Index.js"></script>
   
-  //contador
-var contadorElemento = document.getElementById('contador');
-
-function actualizarContador(numeroPersonas) {
-  contadorElemento.textContent = numeroPersonas;
-}
-
-setInterval(function () {
-  var numeroOnline = Math.floor(Math.random() * 30) + 1;
-  actualizarContador(numeroOnline);
-}, 10000);</script>
   <footer>
     <div class="container2">
       <div class="logo">
