@@ -18,13 +18,63 @@
   <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/fontawesome.js"
     integrity="sha384-7ox8Q2yzO/uWircfojVuCQOZl+ZZBg2D2J5nkpLqzH1HY0C1dHlTKIbpRz/LG23c"
     crossorigin="anonymous"></script>
+  <script>
+  //lista de sugerencias
+var campoBusqueda = document.getElementById('campo-busqueda');
+var listaSugerencias = document.getElementById('lista-sugerencias');
 
+campoBusqueda.addEventListener('input', function () {
+  var consulta = campoBusqueda.value;
+
+  var sugerencias = obtenerSugerencias(consulta);
+
+  mostrarSugerencias(sugerencias);
+});
+
+function mostrarSugerencias(sugerencias) {
+  listaSugerencias.innerHTML = '';
+
+  sugerencias.forEach(function (sugerencia) {
+    var sugerenciaElemento = document.createElement('li');
+    sugerenciaElemento.textContent = sugerencia;
+
+    sugerenciaElemento.addEventListener('click', function () {
+      campoBusqueda.value = sugerencia;
+      listaSugerencias.innerHTML = '';
+    });
+
+    listaSugerencias.appendChild(sugerenciaElemento);
+  });
+
+  listaSugerencias.style.width = campoBusqueda.offsetWidth + 'px';
+}
+
+document.addEventListener('click', function (event) {
+  if (!campoBusqueda.contains(event.target)) {
+    listaSugerencias.innerHTML = '';
+  }
+});
+
+function obtenerSugerencias(consulta) {
+  var sugerencias = [];
+
+  if (consulta === 'motor') {
+    sugerencias = ['autismo', 'asperger', 'funao'];
+  } else if (consulta === 'choche') {
+    sugerencias = ['esto es una falta de respeto', 'me dicen waton', 'lo editan con editores de video como camtasia studio, adobe premier'];
+  } else if (consulta === 'mecanicos') {
+    sugerencias = ['pastero', 'cocainomano', 'weko'];
+  }
+
+  return sugerencias;
+}
+  </script>
 </head>
 
 <body>
   <header>
 
-    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #a0191f;">
+      <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #a0191f;">
       <div class="container-fluid">
         <a class="navbar-brand" href="Index.html"><img src="Img/logotallerrayomkeen.png" alt="Rayo Makween" width="40"
             height="34">Rayo Makween</a>
@@ -58,9 +108,10 @@
           </ul>
           <form class="d-flex">
             <div class="input-group">
-              <input class="form-control" type="search" placeholder="Buscar" aria-label="Search">
+              <input class="form-control" type="search" placeholder="Buscar" aria-label="Search" id="campo-busqueda">
               <button class="btn btn-light" type="submit">Buscar</button>
             </div>
+            <ul id="lista-sugerencias" class="sugerencias"></ul>
           </form>
         </div>
       </div>
@@ -154,6 +205,19 @@
   <div id="ventana-float">
     <span id="contador">1</span> personas en línea
   </div>
+  <script>
+  
+  //contador
+var contadorElemento = document.getElementById('contador');
+
+function actualizarContador(numeroPersonas) {
+  contadorElemento.textContent = numeroPersonas;
+}
+
+setInterval(function () {
+  var numeroOnline = Math.floor(Math.random() * 30) + 1;
+  actualizarContador(numeroOnline);
+}, 10000);</script>
   <footer>
     <div class="container2">
       <div class="logo">
