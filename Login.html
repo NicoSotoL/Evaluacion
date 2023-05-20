@@ -18,6 +18,31 @@
   <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/fontawesome.js"
     integrity="sha384-7ox8Q2yzO/uWircfojVuCQOZl+ZZBg2D2J5nkpLqzH1HY0C1dHlTKIbpRz/LG23c"
     crossorigin="anonymous"></script>
+    <script>
+      function validateLoginForm() {
+        var email = document.forms["loginForm"]["email"].value;
+        var password = document.forms["loginForm"]["password"].value;
+  
+        if (email == "") {
+          alert("Por favor ingresa tu correo electrónico");
+          return false;
+        }
+  
+        if (password == "") {
+          alert("Por favor ingresa tu contraseña");
+          return false;
+        }
+        var passwordRegex = /^(?=.*\d)(?=.*[!@#$%^&*()_+\-=[\]{};':"\\|,.<>/?])[a-zA-Z0-9!@#$%^&*()_+\-=[\]{};':"\\|,.<>/?]+$/;
+    if (!passwordRegex.test(password)) {
+      alert("La contraseña debe contener al menos un número y un carácter especial");
+      return false;
+    }
+
+    window.location.href = "Index.html";
+
+    return true;
+  }
+    </script>
 
 </head>
 
@@ -69,13 +94,14 @@
 
   </header>
 
+
   <div class="container mt-5">
     <div class="row justify-content-center">
       <div class="col-md-6">
         <div class="card shadow-sm">
           <div class="card-body">
             <h4 class="card-title text-center mb-4">Iniciar sesión</h4>
-            <form action="#" method="post">
+            <form action="#" method="post" name="loginForm" onsubmit="return validateLoginForm()">
               <div class="mb-3">
                 <label for="email" class="form-label">Correo electrónico</label>
                 <input type="email" class="form-control" id="email" name="email" required>
@@ -91,7 +117,7 @@
                 </label>
               </div>
               <div class="text-center">
-                <button type="submit" class="btn btn-primary">Iniciar sesión</button>
+                <button type="button" class="btn btn-primary" onclick="validateLoginForm()">Iniciar sesión</button>
               </div>
             </form>
             <div class="text-center mt-3">
@@ -99,7 +125,7 @@
               <a href="LoginA.html" class="btn btn-primary btn-sm">Administrador</a>
             </div>
             <div class="text-center mt-3">
-              <a href="Registro.html">¿Aun no tienes cuenta?</a>
+              <a href="Registro.html">¿Aún no tienes cuenta?</a>
               <a href="LoginM.html" class="btn btn-primary btn-sm">Mecánico</a>
             </div>
           </div>
