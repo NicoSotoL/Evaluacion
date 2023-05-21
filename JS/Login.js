@@ -1,33 +1,22 @@
-document.getElementById("loginForm").addEventListener("submit", function(event) {
-    event.preventDefault();
-    var email = document.getElementById("email").value;
-    var password = document.getElementById("password").value;
-    var userType = ""; 
+function validateLoginForm() {
+    var email = document.forms["loginForm"]["email"].value;
+    var password = document.forms["loginForm"]["password"].value;
 
-    if (email === "" || password === "") {
-        alert("Por favor, ingresa tu correo electrónico y contraseña.");
-        return;
+    if (email == "") {
+      alert("Por favor ingresa tu correo electrónico");
+      return false;
     }
 
-    var sanitizedEmail = email.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
-    var sanitizedPassword = password.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
- 
-    if (sanitizedEmail === "cliente@cuchau.com" && sanitizedPassword === "cliente123") {
-        userType = "cliente";
-    } else if (sanitizedEmail === "mecanico@cuchau.com" && sanitizedPassword === "mecanico123") {
-        userType = "mecanico";
-    } else if (sanitizedEmail === "admin@cuchau.com" && sanitizedPassword === "admin123") {
-        userType = "administrador";
-    } else {
-        alert("Correo electrónico o contraseña incorrectos.");
-        return;
+    if (password == "") {
+      alert("Por favor ingresa tu contraseña");
+      return false;
     }
+    var passwordRegex = /^(?=.\d)(?=.[!@#$%^&()_+-=[]{};':"\|,.<>/?])[a-zA-Z0-9!@#$%^&()_+-=[]{};':"\|,.<>/?]+$/;
+if (!passwordRegex.test(password)) {
+  alert("La contraseña debe contener al menos un número y un carácter especial");
+  return false;
+}
 
-    if (userType === "cliente") {
-        window.location.href = "Index.html";
-    } else if (userType === "mecanico") {
-        window.location.href = "IndexM.html";
-    } else if (userType === "administrador") {
-        window.location.href = "IndexA.html";
-    }
-});
+window.location.href = "Index.html";
+
+return true;

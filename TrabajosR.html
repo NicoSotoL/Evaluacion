@@ -18,10 +18,21 @@
   <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/fontawesome.js"
     integrity="sha384-7ox8Q2yzO/uWircfojVuCQOZl+ZZBg2D2J5nkpLqzH1HY0C1dHlTKIbpRz/LG23c"
     crossorigin="anonymous"></script>
-  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-  
+  <script>
+    // Función para generar un comentario aleatorio
+    function generateRandomComment() {
+      // Realizar una solicitud GET a la API de Lorem Ipsum para obtener un comentario aleatorio
+      $.getJSON("https://jsonplaceholder.typicode.com/comments", function(data) {
+        // Obtener un comentario aleatorio de la respuesta de la API
+        var randomComment = data[Math.floor(Math.random() * data.length)];
+        // Mostrar el comentario en la página
+        document.getElementById("comment").innerHTML = randomComment.body;
+      });
+    }
+  </script>
 </head>
 
 <body>
@@ -311,6 +322,14 @@
 
 
         </div>
+        <div class="container3">
+          <button class="button" onclick="generateRandomComment()">Generar comentario aleatorio</button>
+          <div class="comment-container">
+            <p class="comment-title">Comentario:</p>
+            <p class="comment-content" id="comment"></p>
+          </div>
+        </div>
+  
 </section>
 <div id="ventana-float">
   <span id="contador">1</span> personas en línea
